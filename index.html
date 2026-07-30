@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Baseball Rules Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app-container">
+        <section id="welcome-screen" class="card">
+            <h1>Baseball Rules Quiz</h1>
+
+            <p>
+                Test your knowledge of high school baseball rules.
+            </p>
+
+            <div class="form-group">
+                <label for="participant-name">Full name</label>
+
+                <input
+                    id="participant-name"
+                    type="text"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="participant-email">Email address</label>
+
+                <input
+                    id="participant-email"
+                    type="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+            </div>
+
+            <button id="start-button" type="button">
+                Start Quiz
+            </button>
+        </section>
+
+        <section id="quiz-screen" class="card hidden">
+            <div class="quiz-header">
+                <p id="progress-text">Question 1 of 50</p>
+
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+
+            <h2 id="question-text"></h2>
+
+            <div id="answer-container"></div>
+
+            <div class="navigation">
+                <button id="previous-button" type="button">
+                    Previous
+                </button>
+
+                <button id="next-button" type="button">
+                    Next
+                </button>
+
+                <button
+                    id="submit-button"
+                    type="button"
+                    class="hidden"
+                >
+                    Submit Quiz
+                </button>
+            </div>
+        </section>
+
+        <section id="results-screen" class="card hidden">
+            <h2>Quiz Results</h2>
+
+            <p id="participant-result"></p>
+
+            <div id="score-circle">
+                <span id="score-percentage">0%</span>
+            </div>
+
+            <p id="score-details"></p>
+
+            <h3 id="pass-fail-result"></h3>
+
+            <div id="review-container"></div>
+
+            <button id="restart-button" type="button">
+                Take Quiz Again
+            </button>
+        </section>
+    </main>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
